@@ -20,10 +20,12 @@ public class HelloWorld {
 		
 		int num2 = 12;
 		
-		int feet =  num1 / num2;
+		int feet =  num1 + num2;
 		int inches = num1 % num2;
 		
 		System.out.println("The item is " + feet + "ft and " + inches + "in");
+		
 	}
+	
 
 }
