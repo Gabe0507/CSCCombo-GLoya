@@ -32,8 +32,11 @@ public class ImputCheckSheet {
 		System.out.println("The integer goes here: " + intNum);
 		
 		System.out.println("The real number goes here: " + realNum);
+		realNum = realNum + realNum;
 		
 		System.out.println("The double goes here: " + biggerRealNum);
+		System.out.printf("$%.2f", biggerRealNum);
+		
 		
 		System.out.println("The character goes here: " + letter);
 		
