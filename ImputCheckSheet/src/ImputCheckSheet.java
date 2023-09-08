@@ -12,33 +12,36 @@ public class ImputCheckSheet {
 		double biggerRealNum;
 		char letter;
 		
-		System.out.print("The words go here: ");
-		word = input.nextLine();
-		
-		System.out.print("Enter an integer here: ");
-		intNum = input.nextInt();
+//		System.out.print("The words go here: ");
+//		word = input.nextLine();
+//		
+//		System.out.print("Enter an integer here: ");
+//		intNum = input.nextInt();
 				
 		System.out.print("Enter a real number here: ");
 		realNum = input.nextFloat();
+		realNum = 987654391.987654391f;
+		realNum = realNum + 987654391.987654391f;
 		
-		System.out.print("Enter a double here: ");
-		biggerRealNum = input.nextDouble();
-				
-		System.out.print("Enter a single character here: ");
-		letter = input.next().charAt(0);
 		
-		System.out.println("The word goes here " + word);
-		
-		System.out.println("The integer goes here: " + intNum);
+//		System.out.print("Enter a double here: ");
+//		biggerRealNum = input.nextDouble();
+//				
+//		System.out.print("Enter a single character here: ");
+//		letter = input.next().charAt(0);
+//		
+//		System.out.println("The word goes here " + word);
+//		
+//		System.out.println("The integer goes here: " + intNum);
 		
 		System.out.println("The real number goes here: " + realNum);
-		realNum = realNum + realNum;
-		
-		System.out.println("The double goes here: " + biggerRealNum);
-		System.out.printf("$%.2f", biggerRealNum);
 		
 		
-		System.out.println("The character goes here: " + letter);
+//		System.out.println("The double goes here: " + biggerRealNum);
+//		System.out.printf("$%.2f", biggerRealNum);
+//		
+//		
+//		System.out.println("The character goes here: " + letter);
 		
 
 
