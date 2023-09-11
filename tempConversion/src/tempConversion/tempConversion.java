@@ -17,7 +17,13 @@ public class tempConversion {
 		
 		celsius = (fahrenheit - 32) * 5.0 / 9;
 		
-//		System.out.print(celsius);
+		kelvin = (celsius + 273.15);
+		
+		System.out.println(fahrenheit + " deegree's fahrenheit");
+		System.out.println(celsius + " deegree's celsius");
+		System.out.println(kelvin + " deegree's kelvin");
+
+		
 		
 		
 		
