@@ -20,7 +20,7 @@ public class Arrays {
 			System.out.println(str[i]);
 			System.out.println(count[i]);
 		}
-
+		
 	}
 
 }
