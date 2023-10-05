@@ -1,19 +1,45 @@
+import java.util.Scanner;
 
 public class FindValue {
 
 	public static void main(String[] args) {
+	Scanner input = new Scanner(System.in);
 		
-		int val = 9;
+		int[] a = {1, 2, 3, 4, 5, 6};
+		int num;
 		
-		System.out.println(FindValue(val));
+		System.out.println("Enter an int here: ");
+		num = input.nextInt();
 		
-		int[] val1 = new int[val];
+		System.out.println(vol(a, num));
 	}
 
-	private static boolean FindValue(int val) {
+	private static boolean vol(int[] a, int num) {
+		for (int i = 0; i < a.length; i++) {
+			if (num == a[i])
+			return true;
+		}
+		return false;
+	}
+
 	
-		if (i = 0; i < val) ++i)
-		return true ;
-	}
-
 }
+//***** the body code ******
+//		Scanner input = new Scanner(System.in);
+//		int num;
+//		
+//		num = input.nextInt();
+//		
+//		int[] counts = new int[4];
+//		
+//		System.out.println(val(num, counts ));
+//	
+//
+//	
+// ****** the method code *******
+//	private static boolean val(int num, int[] counts) {
+//		if (num != counts) {
+//			return false;
+//		}
+//		return true;
+//	}
