@@ -32,4 +32,20 @@ public class Car {
 	public double getAmtOfGas() {
 		return amtOfGas;
 	}
+	//Setters
+	public void setColor(String color) {
+		this.color = color;
+	}
+
+	public void setAmtOfGas(double amtOfGas) {
+		this.amtOfGas = amtOfGas;
+	}
+
+	
+	
+	
+	
+
+	
+	
 }

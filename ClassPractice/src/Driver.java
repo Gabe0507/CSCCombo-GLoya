@@ -7,8 +7,11 @@ public class Driver {
 	
 	
 	System.out.println(yourCar.getColor() + " " + yourCar.getMileage() + " " + yourCar.getAmtOfGas());
-		
-		
+	System.out.println(yourCar.getAmtOfGas());
+	yourCar.setColor("Green");
+	System.out.println(yourCar.getColor());
+	
+	
 	}
 
 }
