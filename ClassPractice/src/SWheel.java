@@ -1,9 +1,9 @@
 
-public class Wheel {
+public class SWheel {
 	private int radius;
 	private String material;
-
-	public Wheel(int radius, String material) {
+	
+	public SWheel(int radius, String material) {
 		this.radius = radius;
 		this.material = material;
 	}
@@ -24,8 +24,8 @@ public class Wheel {
 
 	@Override
 	public String toString() {
-		return "radius of the wheel is: " + radius 
-				+ "of the wheel is: " + material + "";
+		return "The steering wheels radius is: " + radius 
+				+ ", the material is: " + material;
 	}
-
+	
 }

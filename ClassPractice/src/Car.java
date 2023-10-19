@@ -5,23 +5,29 @@ public class Car {
 	private double amtOfGas;
 
 	private Wheel[] wheels;
-
+	private SWheel sWheel;
+	
 	// Constructors
 	public Car() {
 		color = "White";
 		mileage = 1000;
 		amtOfGas = 30.0;
+		int numWheels = 4;
+		wheels = new Wheel[numWheels];
+		sWheel = new SWheel(22, "wood");
+		setWheels(22, "wood");
 	}
-
+	// Constructor 
 	public Car(String myColor, int mileage, double amtOfGas, int numWheels) {
 		color = myColor;
 		this.mileage = mileage;
 		this.amtOfGas = amtOfGas;
 		wheels = new Wheel[numWheels];
+		sWheel = new SWheel(22, "wood");
 
 	}
-	// Accessors or Getters
-
+	// Getters
+	
 	public String getColor() {
 		return color;
 	}
@@ -39,6 +45,9 @@ public class Car {
 	}
 
 	// Setters
+	
+	
+	
 	public void setWheels(int radius, String material) {
 		for (int i = 0; i < wheels.length; i++) {
 			wheels[i] = new Wheel(radius, material);
@@ -60,7 +69,13 @@ public class Car {
 
 	@Override
 	public String toString() {
-		return "Car color is: " + color + ", mileage is: " + mileage + ", amtOfGas is: " + amtOfGas + "Wheel size:";
+		Wheel[] wls = getWheels();
+		return "Car color is: " + color 
+				+ ", mileage is: " + mileage 
+				+ ", amtOfGas is: " + amtOfGas
+				+ ", Wheel size is: " + wls[0].getRadius() 
+				+ ", Wheel material is: " + wls[0].getMaterial()
+				+ ", Steering wheel is made of: " + sWheel.getMaterial();
 	}
 
 }
