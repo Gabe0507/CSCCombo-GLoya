@@ -47,9 +47,21 @@ public class Character {
 		this.speed = speed;
 	}
 	
-	public void setWepon(String name, int dmg) {
-		this.wepon = new Wepon(name, dmg);
+	public void setWepon(String name, int power) {
+		this.wepon = new Wepon(name, power);
 	}
+	
+	public double doDamage() {
+		double dmg = speed * strength * wepon.getDamage();
+		return dmg;
+	}
+	public void receiveDamage(double damage) {
+		hp -= damage;
+	}
+	public boolean isDead() {
+		return hp <= 0;
+	}
+	
 	@Override
 	public String toString() {
 		return "Name is " + name 

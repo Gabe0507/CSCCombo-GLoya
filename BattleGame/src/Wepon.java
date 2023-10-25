@@ -1,32 +1,32 @@
 
 public class Wepon {
 	private String name;
-	private int dmg;
+	private double power;
 	public Wepon() {
 	}
-	public Wepon(String name, int dmg) {
+	public Wepon(String name, double power) {
 		super();
 		this.name = name;
-		this.dmg = dmg;
+		this.power = power;
 	}
 	// Getters
 	public String getName() {
 		return name;
 	}
 
-	public int getDmg() {
-		return dmg;
+	public double getDamage() {
+		return power;
 	}
 	// Setters
 	public void setName(String name) {
 		this.name = name;
 	}
-	public void setDmg(int dmg) {
-		this.dmg = dmg;
+	public void setDamage(int dmg) {
+		this.power = power;
 	}
 	@Override
 	public String toString() {
-		return "Name of wepon " + name + "\ndmg is " + dmg;
+		return "Name of wepon " + name + "\npower is " + power;
 	}
 	
 }
