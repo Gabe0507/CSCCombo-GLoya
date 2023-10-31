@@ -41,7 +41,29 @@ public class Deck {
 		 cards[a] = cards[b];
 		 cards[b] = temp;
 	}
+	private static void swapDeckCards(Card[] cards, int a, int b) {
+		 Card temp = cards[a];
+		 cards[a] = cards[b];
+		 cards[b] = temp;
+	}
 	
+	public void BubbleSort() {
+		for (int i = 0; i < cards.length -1; i++) {
+			for (int j = 1; j < cards.length -i; j++) {
+				if (cards[j - 1].compareTo(cards[j]) > 0) {
+					swap(j-1, j);
+				}
+			}
+		} 
+	}
+	
+	public static void BubbleSort(Deck deck) {
+		Card[] cards = deck.getCards();
+		for (int i = 0; i < cards.length -1; i++) {
+			for (int j = 1; j < cards.length -i; j++) {
+				if (cards[j - 1].compareTo(cards[j]) > 0) {
+					swapDeckCards(cards, j - 1, j);
+	}
 	@Override
 	public String toString() {
 		StringBuilder retStr = new StringBuilder();
