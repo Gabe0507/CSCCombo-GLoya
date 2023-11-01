@@ -63,6 +63,9 @@ public class Deck {
 			for (int j = 1; j < cards.length -i; j++) {
 				if (cards[j - 1].compareTo(cards[j]) > 0) {
 					swapDeckCards(cards, j - 1, j);
+				}
+			}
+		}
 	}
 	@Override
 	public String toString() {

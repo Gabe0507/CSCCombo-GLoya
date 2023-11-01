@@ -1,16 +1,13 @@
-import java.util.Scanner;
 
 public class Loops {
 
 	public static void main(String[] args) {
 		int count = 0;
 		int total = 0;
-//		while (count < 10)
-//		{
+//		while (count < 10) {
 //			System.out.println(count);
 //			count ++;
-//			total += + count;
-//			
+//			total += + count;		
 //	}
 //		System.out.println("the total of count is " + total);
 		
