@@ -26,17 +26,17 @@ public class Card {
 		this.suit = suit;
 	}
 	public int compareTo(Card oCard) {
-		if (suit > oCard.getSuit()) {
-			return 5;
-		}
-		else if (suit < oCard.suit) {
-			return -5;
-		}
+//		if (suit > oCard.getSuit()) {
+//			return 5;
+//		}
+//		else if (suit < oCard.suit) {
+//			return -5;
+//		}
 		if (rank > oCard.rank) {
-			return 5;
+			return 1;
 		}
 		if (rank < oCard.rank) {
-			return -5;
+			return -1;
 		}
 		return 0;
 	}

@@ -14,7 +14,7 @@ public class HelloWorld {
 		
 		 System.out.println("hello World!");
 		
-		System.out.println();
+		
 		
 		int num1 = 66;
 		

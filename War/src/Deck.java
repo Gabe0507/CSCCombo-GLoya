@@ -1,3 +1,4 @@
+import java.util.Iterator;
 import java.util.Random;
 
 public class Deck {
@@ -13,7 +14,9 @@ public class Deck {
 			}
 		}
 	}
-
+	public Deck(int numCards) {
+		cards = new Card[numCards];
+	}
 	public Card[] getCards() {
 		return cards;
 	}
@@ -66,6 +69,15 @@ public class Deck {
 			}
 		}
 	}
+	
+	public Deck subDeck(int start, int end) {
+		Deck subDeck = new Deck(end-start);
+		for ( int i = start, j = 0; i < end; i++, j ++) {
+			subDeck.cards[j] = cards[i];
+		}
+		return subDeck;
+	}
+	
 	@Override
 	public String toString() {
 		StringBuilder retStr = new StringBuilder();

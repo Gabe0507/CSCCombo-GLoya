@@ -7,6 +7,19 @@ public class Pile {
 	public Pile() {
 		pile = new ArrayList<>();
 	}
+	
+	public void addDeck(Deck deck) {
+		for(Card card : deck.getCards()){
+			this.addCard(card);
+		}
+	}
+	
+	public void addPile(Pile pile) {
+		while(!pile.isEmpty()) {
+			this.pile.add(pile.popCard());
+		}
+	}
+	
 	public void addCard(Card card) {
 		pile.add(card);
 	}
