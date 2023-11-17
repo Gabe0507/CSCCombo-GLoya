@@ -2,8 +2,9 @@ import java.util.Iterator;
 import java.util.Random;
 
 public class Deck {
-	private final int NUMBER_OF_CARDS = 52;
-	Card[] cards = new Card[NUMBER_OF_CARDS];
+	private final static int NUMBER_OF_CARDS = 52;
+	static Card[] cards = new Card[NUMBER_OF_CARDS];
+	private int length ;
 
 	private static Random rand = new Random();
 	public Deck() {
@@ -70,6 +71,23 @@ public class Deck {
 		}
 	}
 	
+	public static void selectionSort(Deck deck) {
+		for (int i = 0; i < cards.length - 1; i++) {
+			int index = 0;
+			for (int j = 1; j < cards.length - i; j++) {
+				if (cards[j].compareTo(cards[index]) > 0) {
+					index = j;
+				}
+			}
+			swap(cards, index, cards.length - i - 1);
+		}
+	}
+	
+	private static void swap(Card[] cards2, int bigindex, int i) {
+		
+		
+		
+	}
 	public Deck subDeck(int start, int end) {
 		Deck subDeck = new Deck(end-start);
 		for ( int i = start, j = 0; i < end; i++, j ++) {

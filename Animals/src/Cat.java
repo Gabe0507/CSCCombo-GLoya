@@ -7,6 +7,25 @@ public class Cat extends Animal{
 		this.color = color;
 	}
 	
+	
+	
+	public String getColor() {
+		return color;
+	}
+
+
+
+	public void setColor(String color) {
+		this.color = color;
+	}
+
+	public boolean equals(Cat cat) {
+		if (this.getLength() == cat.getLength() 
+				&& this.getHeigth() == cat.getHeigth() 
+				&& this.color.equals(cat.color)) return true;
+		return false;
+	}
+	
 	@Override
 	public String makeNoise() {
 		return "Meow!";
