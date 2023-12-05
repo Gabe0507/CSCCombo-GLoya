@@ -29,7 +29,7 @@ public class Deck {
 		}
 	}
 	
-	public static void suffle(Deck deck) {
+	public static void shuffle(Deck deck) {
 		Card[] cards = deck.getCards();
 		for (int i = 0; i < cards.length; i++) {
 			 int index = rand.nextInt(cards.length);
@@ -71,7 +71,7 @@ public class Deck {
 		}
 	}
 	
-	public static void selectionSort(Deck deck) {
+	public void selectionSort() {
 		for (int i = 0; i < cards.length - 1; i++) {
 			int index = 0;
 			for (int j = 1; j < cards.length - i; j++) {
@@ -83,9 +83,10 @@ public class Deck {
 		}
 	}
 	
-	private static void swap(Card[] cards2, int bigindex, int i) {
-		
-		
+	private static void swap(Card[] cards, int bigindex, int i) {
+		 Card temp = cards[bigindex];
+		 cards[bigindex] = cards[i];
+		 cards[i] = temp;
 		
 	}
 	public Deck subDeck(int start, int end) {

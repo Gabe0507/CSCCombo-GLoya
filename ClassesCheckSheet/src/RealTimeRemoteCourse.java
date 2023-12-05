@@ -19,6 +19,10 @@ public class RealTimeRemoteCourse extends OnlineCourse {
 	public void setZoomInfo(int zoomInfo) {
 		this.zoomInfo = zoomInfo;
 	}
+	///// FilIO /////
+	public String dbString() {
+		return "Course" + "," + getCourseNum() + "," + getNumStudents() + "," + getMaxStudents() + "," + getCredits() + "," + zoomInfo;
+ 	}
 	////// toString /////////
 	@Override
 	public String toString() {

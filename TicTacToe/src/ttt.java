@@ -31,6 +31,7 @@ public class ttt {
 			spaces(boxes, i, j);
 			drawBoard(boxes);
 		}	
+		
 		System.out.println();
 		drawBoard(boxes);
 	}

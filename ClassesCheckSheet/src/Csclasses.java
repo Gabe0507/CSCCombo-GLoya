@@ -1,9 +1,12 @@
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class Csclasses {
-	public static void main(String[] args) {
+	
+	private static String dbFile = "CourseDataBase.csv";
+	public static void main(String[] args) throws FileNotFoundException {
 		Scanner input = new Scanner(System.in);
 		////// Creates ArrayList called courseList ////// 
 		List<Course> courseList = new ArrayList<>();	
@@ -20,6 +23,7 @@ public class Csclasses {
 		int maxStudents = input.nextInt();
 		System.out.println("Enter credits");
 		int credits = input.nextInt();
+	
 		if (num == 1) {
 			System.out.println("Enter room number");
 			String roomNum = input.next();
@@ -34,7 +38,20 @@ public class Csclasses {
 			course = new RealTimeRemoteCourse(courseNum, numStudents, maxStudents, credits, zoominfo);
 		}
 		courseList.add(course);
-
+		////// FileIO /////
+		FileWriter fileWriter = new FileWriter();
+		for (Course courses: courseList) {
+			fileWriter.writeToFile(course);
+		}
+		fileWriter.close();
+		
+		FileReader fileReader = new FileReader(dbFile);
+		List<Course> courses = fileReader.readCoursesFromFile();
+		
+		for(Course course1 :courses) {
+			System.out.println(course.toString());
+		}
+		
 		////// Passes array list to printCourseToString method //////	
 		for (int i = 0; i < courseList.size(); i++) {
 			printCourseToString(courseList.get(i));	

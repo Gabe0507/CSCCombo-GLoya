@@ -42,6 +42,10 @@ public class Course {
 	public void setCredits(int credits) {
 		this.credits = credits;
 	}
+	///// FileIo //////
+	public String dbString() {
+		return "Course" + "," + courseNum + "," + numStudents + "," + maxStudents + "," + credits;
+ 	}
 	////// toString ////////
 	@Override
 	public String toString() {
@@ -50,5 +54,6 @@ public class Course {
 				+ "\n" +"maxStudents = " + maxStudents 
 				+ "\n"+ "credits = " + credits;
 	}
+	
 	
 }
