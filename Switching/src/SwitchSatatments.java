@@ -36,23 +36,24 @@ public class SwitchSatatments {
 //			System.out.println("After" + " " + num);
 //			num++;
 //		}
+
 		
-//		String food = "apple";
-//		
-//		switch (food) {
-//		case "apple":
-//		case "banana":
-//		case "tomato":
-//			System.out.println("Fruit");
-//			break;
-//		case "carrot":
-//		case "peas":
-//		case "broccoli":
-//			System.out.println("Veggies");
-//			break;
-//		default:
-//			System.out.println("nothing");
-//	}	
+		int num2 =6;
+		String food = num2 > 5 ? (num2 < 8 ? "banana" : "carrot") : "apple";
+		switch (food) {
+		case "apple":
+		case "banana":
+		case "tomato":
+			System.out.println("Fruit");
+			break;
+		case "carrot":
+		case "peas":
+		case "broccoli":
+			System.out.println("Veggies");
+			break;
+		default:
+			System.out.println("nothing");
+	}	
 	    Day day = Day.SATURDAY;
 	    int numLetters = switch (day) {
 	        case MONDAY:

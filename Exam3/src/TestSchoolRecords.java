@@ -19,12 +19,17 @@ public class TestSchoolRecords {
 		Person person6 = new Staff("Bob", "2017 Leaf Ave", "970-345-6753", "Bobmail@mail.com", "Bp457", 4600.0, "9/12/06", "Teacher");
 		persons.add(person6);	
 		
-			printPersons(persons);	
+		//	printPerson(person1);
+		//	printPerson(persons.get(2));
+			printPersons(persons);
 	}
 	private static void printPersons(List<Person> persons) {
-		for (int i = 0; i < persons.size(); i ++) {
-			System.out.println(persons);
+		for (Person person : persons ) {
+			printPerson(person);
 		}
 	}
 
+	public static void printPerson(Person person) {
+		System.out.println(person.toString());
+	}
 }

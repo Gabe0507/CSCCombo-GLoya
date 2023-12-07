@@ -4,7 +4,7 @@ public class Students extends Person{
 	private String status;
 
 	public Students(String name, String address, String phoneNumber, String email, String status) {
-		super();
+		super(name, address, phoneNumber, email);
 		this.status = status;
 	}
 	public String getStatus() {
@@ -15,7 +15,7 @@ public class Students extends Person{
 	}
 	@Override
 	public String toString() {
-		return "Students [status=" + status + "]";
+		return super.toString() + "Students [status=" + status + "]";
 	}
 	
 }
